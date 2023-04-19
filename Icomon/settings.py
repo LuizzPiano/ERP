@@ -12,7 +12,7 @@ SECRET_KEY = 'django-insecure-d5^0q@d1e#abq4nw5-w)iyj0qqokgh20v)__=!&fpwhr@5$^zr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'cadastros.apps.CadastrosConfig',
     'django_cleanup.apps.CleanupConfig',
     'crispy_forms',
+    
     
     
     
@@ -137,3 +138,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 MEDIA_URL = '/media/'
 
 MEDIA_ROOTS = os.path.join(BASE_DIR, 'media')
+
+
+RAILWAY_DEPLOYMENT_HOST = "localhost" 
+RAILWAY_DEPLOYMENT_PORT = 8000 
+RAILWAY_DEPLOYMENT_USERNAME = "admin" 
+RAILWAY_DEPLOYMENT_PASSWORD = "password"
