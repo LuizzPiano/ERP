@@ -2,10 +2,12 @@
 
 from pathlib import Path
 import os
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+import dj_database_url
+
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+DATABASE_URL = 'postgresql://postgres:Jk11Yn2fcetNWf0yNwwr@containers-us-west-182.railway.app:8023/railway'
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-d5^0q@d1e#abq4nw5-w)iyj0qqokgh20v)__=!&fpwhr@5$^zr'
 
@@ -73,11 +75,18 @@ WSGI_APPLICATION = 'Icomon.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1800),
+    
     }
-}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
 
 
 # Password validation
