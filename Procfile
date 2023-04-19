@@ -1,1 +1,1 @@
--*web: gunicorn Icomon.wsgi --log-file -
+web: gunicorn Icomon.wsgi --log-file -
