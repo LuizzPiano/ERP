@@ -139,5 +139,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOTS = os.path.join(BASE_DIR, 'media')
 
+DJANGO_SECRET_KEY = '0.0.0.0'
+
 
 
