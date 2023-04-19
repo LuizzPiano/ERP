@@ -1,1 +1,0 @@
-web: gunicorn Icomon.wsgi --log-file -
