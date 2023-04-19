@@ -1,0 +1,13 @@
+{% extends 'paginas/modelo-icomon.html' %}
+
+
+{% block conteudo %}
+<h3>Página inicial</h3>
+
+{% if user.perfil.nome_completo %}
+Bem vindo ao sistema {{ user.perfil.nome_completo }}.
+{% else %}
+    EM DESENVOLVIMENTO 
+{% endif %}
+
+{% endblock %}
