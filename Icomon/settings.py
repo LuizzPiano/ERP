@@ -7,9 +7,7 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DATABASE_URL = 'postgresql://postgres:Jk11Yn2fcetNWf0yNwwr@containers-us-west-182.railway.app:8023/railway'
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-d5^0q@d1e#abq4nw5-w)iyj0qqokgh20v)__=!&fpwhr@5$^zr'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
