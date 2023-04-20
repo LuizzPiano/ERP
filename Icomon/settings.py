@@ -116,7 +116,7 @@ DATABASES = {
 }
 
 
-
+MYSQL_URL = 'mysql://root:hpGGwSmzkleLR9XYg4YZ@containers-us-west-102.railway.app:7125/railway'
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
