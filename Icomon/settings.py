@@ -7,7 +7,9 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+DATABASE_URL = 'postgresql://postgres:Jk11Yn2fcetNWf0yNwwr@containers-us-west-182.railway.app:8023/railway'
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'django-insecure-d5^0q@d1e#abq4nw5-w)iyj0qqokgh20v)__=!&fpwhr@5$^zr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -77,7 +79,6 @@ WSGI_APPLICATION = 'Icomon.wsgi.application'
     
 #     }
 
-<<<<<<< HEAD
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -101,8 +102,6 @@ WSGI_APPLICATION = 'Icomon.wsgi.application'
 #     }
 # }
 
-=======
->>>>>>> 7e27b04df34ecd527999255e18b6bc5f5cfb2eff
 
 DATABASES = {
     'default': {
@@ -110,17 +109,14 @@ DATABASES = {
         'NAME': 'icomonerp',
         'USER': 'admin',
         'PASSWORD': 'asdwasdw123',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'HOST': 'containers-us-west-102.railway.app',
+        'PORT': '7125',
         
     }
 }
 
 
-<<<<<<< HEAD
 MYSQL_URL = 'mysql://root:hpGGwSmzkleLR9XYg4YZ@containers-us-west-102.railway.app:7125/railway'
-=======
->>>>>>> 7e27b04df34ecd527999255e18b6bc5f5cfb2eff
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -145,7 +141,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'Etc/UTC'
+TIME_ZONE = 'America/Sao_paulo'
 
 USE_I18N = True
 
