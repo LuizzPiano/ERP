@@ -109,8 +109,8 @@ DATABASES = {
         'NAME': 'icomonerp',
         'USER': 'admin',
         'PASSWORD': 'asdwasdw123',
-        'HOST': 'containers-us-west-102.railway.app',
-        'PORT': '7125',
+        'HOST': 'localhost',
+        'PORT': '3306',
         
     }
 }
