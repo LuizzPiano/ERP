@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['erp-production-4f27.up.railway.app']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
