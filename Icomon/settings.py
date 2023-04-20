@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'cadastros.apps.CadastrosConfig',
     'django_cleanup.apps.CleanupConfig',
     'crispy_forms',
+
     
     
     
