@@ -1,0 +1,45 @@
+{% extends 'paginas/modelo-icomon.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block conteudo %}
+<h3>Lista de Contato</h3>
+<!-- <a href="{% url 'cadastrar-Obra' %}" class="btn btn-primary btn-sm">Cadastrar Obra</a> -->
+
+<hr>
+<div class="table-responsive">
+<table class="table table-striped">
+    <tr>
+        
+        <th>Nome</th>
+        <th>Área</th>
+        <th>Função</th>
+        <th>Número</th>
+        <th>Base</th>
+        
+    </tr>
+
+    {% for contato in object_list %}
+    
+    <tr>
+        <td>{{ contato.Nome }}</td>
+        <td>{{ contato.Area }}</td>
+        <td>{{ contato.Funcao }}</td>
+        <td>{{ contato.Numero }}</td>
+        <td>{{ contato.Base }}</td>
+
+      
+        
+        
+    </tr>
+    {% empty %}
+    <tr>
+            <td colspan="3">Nenhum campo registrado. </td>
+    </tr>
+    {% endfor %}
+
+
+</table>
+</div>
+{% endblock %}

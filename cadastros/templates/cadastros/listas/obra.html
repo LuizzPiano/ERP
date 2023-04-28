@@ -1,13 +1,19 @@
 {% extends 'paginas/modelo-icomon.html' %}
 
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block conteudo %}
 <h3>Lista de Obras</h3>
+<a href="{% url 'cadastrar-Obra' %}" class="btn btn-primary btn-sm">Cadastrar Obra</a>
+
 <hr>
 <div class="table-responsive">
 <table class="table table-striped">
     <tr>
+        
+        <th>Status</th>
+        <th>Status_Final</th>
         <th>Obra</th>
         <th>Colaborador 1°</th>
         <th>Colaborador 2°</th>
@@ -17,9 +23,13 @@
     {% for obra in object_list %}
     
     <tr>
+        <td>{{ obra.status }}</td>
+        <td>{{ obra.status_final }}</td>
         <td>{{ obra.DC }}</td>
         <td>{{ obra.Colaborador_1 }}</td>
         <td>{{ obra.Colaborador_2 }}</td>
+
+      
         
         <td>
             <a href="{% url 'editar-obra' obra.pk %}" class="btn btn-warning btn-sm">Editar</a>

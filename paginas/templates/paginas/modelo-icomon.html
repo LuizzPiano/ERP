@@ -85,6 +85,24 @@
 
                             </div>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                Consultas
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                
+                                <a class="dropdown-item" href="{% url 'listar-Obra' %}">Obras</a>
+                                <a class="dropdown-item" href="{% url 'listar-Contatos' %}">Contatos</a>
+                                <a class="dropdown-item" href="{% url 'lista_escalas' %}">Escalas</a>
+               
+
+                                
+
+
+                            </div>
+                        </li>
                         {% endif %}
 
                         <li class="nav-item ">
@@ -152,6 +170,9 @@
             {% block conteudo %}
             <h3>Página inicial</h3>
             {% endblock %}
+            
+          
+            
         </div>
 
     </main>

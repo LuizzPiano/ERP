@@ -20,6 +20,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -31,9 +32,10 @@ INSTALLED_APPS = [
     'cadastros.apps.CadastrosConfig',
     'django_cleanup.apps.CleanupConfig',
     'crispy_forms',
-
-    
-    
+    'crispy_bootstrap4',
+    'escalas',
+   
+ 
     
     
 ]
@@ -88,22 +90,6 @@ WSGI_APPLICATION = 'Icomon.wsgi.application'
 # }
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'icomonerp',
-#         'USER': 'admin',
-#         'PASSWORD': 'asdwasdw123',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
-#         'OPTIONS': {
-#         'charset': 'utf8mb4',
-#         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-#         }
-#     }
-# }
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -112,9 +98,25 @@ DATABASES = {
         'PASSWORD': 'asdwasdw123',
         'HOST': 'localhost',
         'PORT': '3306',
-        
+        'OPTIONS': {
+        'charset': 'utf8mb4',
+        'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'icomonerp',
+#         'USER': 'admin',
+#         'PASSWORD': 'asdwasdw123',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+        
+#     }
+# }
 
 
 MYSQL_URL = 'mysql://root:hpGGwSmzkleLR9XYg4YZ@containers-us-west-102.railway.app:7125/railway'
@@ -173,10 +175,21 @@ LOGIN_URL = 'login'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
-MEDIA_URL = '/media/'
 
-MEDIA_ROOTS = os.path.join(BASE_DIR, 'media')
+JAZZMIN_SETTINGS = {
+    
+    "site_title": "Icomon",
+    "site_header": "Icomon",
+    "site_brand": "Icomon",
+    "welcome_sign": "Seja bem vindo ao ERP Icomon",
+    "copyright": "Icomon",
 
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+        "auth.Perfils": "fas fa-users",  
+        },
 
-
+}
 
