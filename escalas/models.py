@@ -10,6 +10,10 @@ class Colaboradores(models.Model):
     class Meta:
         unique_together = ['nome', 'data_admissao']
 
+    class Meta:
+        verbose_name ="Colaboradores"
+        verbose_name_plural = "Colaboradores"
+
     def __str__(self):
         return str(self.nome) 
 

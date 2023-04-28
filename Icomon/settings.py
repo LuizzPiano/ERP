@@ -6,7 +6,7 @@ import os
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+SECRET_KEY = '*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'Icomon.wsgi.application'
 # }
 
 
-<<<<<<< HEAD
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -120,8 +120,7 @@ DATABASES = {
 MYSQL_URL = 'mysql://root:hpGGwSmzkleLR9XYg4YZ@containers-us-west-102.railway.app:7125/railway'
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
-=======
->>>>>>> b7d80aef4eb141fc96d396a6a191219fb0cfbb02
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {

@@ -38,6 +38,7 @@ class Obras(models.Model):
     Fotos = models.FileField(upload_to="uploads", max_length=100, null=True, default=None)
     Obs = models.TextField(max_length=500, verbose_name="Observação")
     status_final = models.CharField(max_length=12, choices=Status_final_choices, blank=False, null=False)
+    Check1 = models.BooleanField(verbose_name='Preenchido Check liste de seguraça', blank=False, null=False)
     Data_01 = models.DateTimeField('Data da Criação',auto_now_add=True)
     Data_02 = models.DateTimeField('Última atualização', auto_now=True)
 
@@ -58,8 +59,27 @@ class Obras(models.Model):
     def __str__(self):
         return "{} ({})".format(self.DC, self.Colaborador_1)
     
-    
 
+
+
+
+
+class Check_List(models.Model):
+    DC = models.CharField(max_length=100)
+    Escada = models.BooleanField(help_text="Escada está segura conforme treinamentos?")
+    Tempo = models.BooleanField(help_text="Tempo está favorável para execução da atividade?")
+    Poste = models.BooleanField(help_text="Verificou se está energizado?")
+    Animais = models.BooleanField(help_text="Fez a verificação de ambiente?")
+    Epis = models.BooleanField(help_text="Está usando os equipamentos de segurança corretos para executa essa atividade?")
+    Sinalizacao  = models.BooleanField(verbose_name = 'Sinalização',help_text="Área de trabalho já está sinalizado conforme treinamento?")
+    Colaborador = models.CharField(max_length=100)
+    Ind = models.CharField(max_length=10, verbose_name="ID")
+    Check_List = models.BooleanField()
+
+class Meta:
+    verbose_name = 'Check List'
+    verbose_name_plural = 'Check List'
+    
 class Contatos(models.Model):
     Nome = models.CharField(max_length=20)
     Area = models.CharField(max_length=20, verbose_name='Área')
